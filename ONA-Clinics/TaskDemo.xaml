@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="ONA_Tasks.TaskDemo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+               TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+                TextElement.FontSize="10"  MouseDoubleClick="UserControl_MouseDoubleClick" MouseEnter="UserControl_MouseEnter" MouseLeave="UserControl_MouseLeave"
+             >
+
+    <Grid >
+
+
+        <Border x:Name="aaaaa"  BorderThickness="2" CornerRadius="5"   BorderBrush="{DynamicResource PrimaryHueDarkBrush}"  Background="{DynamicResource MaterialDesignPaper}" Margin="0,13,0,0">
+            <StackPanel  Margin="0,5,0,0" >
+
+                <StackPanel FlowDirection="RightToLeft" HorizontalAlignment="Right"  Margin="2,1" Orientation="Horizontal">
+                    <TextBlock Text="العنوان :"    />
+                    <TextBlock x:Name="Title" Text="شاشة خدمة العملاء 33333333333333333333333" TextWrapping="Wrap"      />
+                </StackPanel>
+                <StackPanel FlowDirection="RightToLeft" HorizontalAlignment="Right" Margin="2,0" Orientation="Horizontal">
+                    <TextBlock Text="المدة : "    />
+                    <TextBlock x:Name="Duration" Text="10" Width="61"  TextAlignment="Right"   />
+                    <TextBlock Text=" ايام"    />
+                </StackPanel>
+                <StackPanel FlowDirection="RightToLeft" HorizontalAlignment="Right" Margin="2,0" Orientation="Horizontal">
+                    <TextBlock Text="من تاريخ : "    />
+                    <TextBlock x:Name="From" Text="11/05/2019" Width="101" TextAlignment="Center"   />
+                </StackPanel>
+                <StackPanel FlowDirection="RightToLeft" HorizontalAlignment="Right"  Margin="2,0" Orientation="Horizontal">
+                    <TextBlock Text="الى تاريخ : "    />
+                    <TextBlock x:Name="To" Text="11/05/2019" Width="99" TextAlignment="Center"   />
+                </StackPanel>
+                <StackPanel Visibility="Collapsed" FlowDirection="RightToLeft" HorizontalAlignment="Right"  Margin="2,0" Orientation="Horizontal">
+                    <TextBlock  x:Name="To_Developer"/>
+                    <TextBlock  x:Name="Created_By"/>
+                    <TextBlock  x:Name="To_Tester"/>
+                    <TextBlock  x:Name="Task_Flage"/>
+                    <TextBlock  x:Name="Task_Details"/>
+                    <TextBlock  x:Name="Started_Date" />
+                    <TextBlock  x:Name="Ended_Date"    />
+                    <TextBlock  x:Name="Duration_Taked" />
+                    <TextBlock  x:Name="DEVELOPER_NOTE"    />
+                    <TextBlock  x:Name="TESTER_NOTE" />
+                    <Border x:Name="b_test" BorderBrush="{DynamicResource PrimaryHueDarkBrush}"  />
+                </StackPanel>
+            </StackPanel>
+
+
+
+        </Border>
+        <Border BorderBrush="{DynamicResource PrimaryHueDarkBrush}"  CornerRadius="3"  BorderThickness="3"  Background="{DynamicResource PrimaryHueDarkBrush}"  VerticalAlignment="Top" HorizontalAlignment="Center" Height="18"   >
+            <TextBlock x:Name="Code" Text="*****" Background="{DynamicResource PrimaryHueDarkBrush}"      VerticalAlignment="Center"  TextAlignment="Center"   />
+
+
+        </Border>
+    </Grid>
+</UserControl>

@@ -1,0 +1,68 @@
+﻿<Window xmlns:ONA_Tasks="clr-namespace:ONA_Tasks"  x:Class="ONA_Tasks.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      
+   Title="تسجيل الدخول" Height="273.214" Width="333.928" ResizeMode="NoResize"  
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+     
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto" WindowStartupLocation="CenterScreen"
+        SnapsToDevicePixels="True" WindowStyle="None"
+     KeyDown="Window_KeyDown"
+           
+        
+        >
+    <Border  CornerRadius="5" Background="{DynamicResource PrimaryHueDarkBrush}"  >
+      
+        <Grid >
+            <StackPanel Margin="20" >
+                <Border Margin="88,0,88,0" Background="White"  CornerRadius="60"/>
+
+                <Border  Background="White" Margin="10" CornerRadius="50">
+                    <StackPanel Margin="25">
+                        <Grid Margin="5">
+                            <materialDesign:PackIcon Height="38" Width="22"  Kind="Account" Foreground="{DynamicResource PrimaryHueDarkBrush}"  />
+                            <TextBox x:Name="txtEName" materialDesign:HintAssist.Hint=" User Name"   Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="22,0,0,0"      />
+
+                        </Grid>
+                        <Grid  Margin="5">
+                            <materialDesign:PackIcon  Kind="Key" Foreground="{DynamicResource PrimaryHueDarkBrush}"  Height="38" Width="22" />
+                            <PasswordBox x:Name="PasswordBox"  materialDesign:HintAssist.Hint=" Password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin="22,0,0,0"  />
+
+                        </Grid>
+                        <StackPanel Margin="5" Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Button Content="تسجيل دخول" Margin="8 15"    materialDesign:ShadowAssist.ShadowDepth="Depth3" Click="Button_Click"  />
+                            <Button Content="خروج"   Margin="8 15"    materialDesign:ShadowAssist.ShadowDepth="Depth3" Click="Button_Click_1" />
+                        
+                        </StackPanel>
+                       <StackPanel
+  VerticalAlignment="Center">
+  <!--the request to open the dialog will bubble up to the top-most DialogHost, but we can used the attached property based event to handle the response -->
+                            
+</StackPanel>
+                    </StackPanel>
+                </Border>
+                <Canvas >
+
+
+
+                    <!-- floating action button with progress -->
+
+                </Canvas>
+                
+            </StackPanel>
+
+            <materialDesign:Snackbar MessageQueue="{materialDesign:MessageQueue}" Message="Welcome To Task APP" x:Name="SnackbarThree2" IsActive="True" />
+            <materialDesign:Snackbar  Background="{DynamicResource MaterialDesignPaper}"    TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+  HorizontalAlignment="Stretch"
+  x:Name="SnackbarThree">
+                <materialDesign:SnackbarMessage
+    ActionContent="OK" ActionClick="SnackbarMessage_ActionClick"  />
+            </materialDesign:Snackbar>
+        </Grid>
+    </Border>
+</Window>
